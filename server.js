@@ -13,7 +13,7 @@ database()
 
 app.use('/api/v1/auth',userRoute)
 app.get('/',(req,res)=>{
-    res.send("HI dhi")
+    res.send("HI shivam")
 })
 const PORT = process.env.PORT || 8001
 
