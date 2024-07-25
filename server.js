@@ -6,8 +6,8 @@ app.use(cors())
 
 require('dotenv').config()
 app.use(express.json())
-const database=require('../server/config/database')
-const userRoute=require('../server/router/userRoute')
+const database=require('./config/database')
+const userRoute=require('./router/userRoute')
 
 database()
 
