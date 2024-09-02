@@ -37,10 +37,10 @@ exports.latestBlog=async(req,res)=>{
         let maxlimit=5;
         let {page}=req.body
         let blog=  await Blog.find({draft:false}).populate("author","personal_info.profile_img personal_info.username personal_info.fullname -_id")
+           .limit(maxlimit)
            .sort({"publishedAt":-1})
            .select("blog_id title des banner activity tags publishedAt -_id ") 
            .skip((page-1)*maxlimit)
-           .limit(maxlimit)
         //    console.log(blog)
         // let blog=  await Blog.find({draft:false}).populate("author")
 
