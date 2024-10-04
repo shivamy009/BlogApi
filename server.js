@@ -16,6 +16,9 @@ app.get('/',(req,res)=>{
     res.send("HI shivam")
 })
 const PORT = process.env.PORT || 8001
+app.use('/ty',(req,res)=>{
+    res.send("Hello")
+})
 
 app.listen(PORT,()=>{
     console.log(`App is listening on port ${PORT}`)
