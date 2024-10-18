@@ -17,7 +17,7 @@ app.get('/',(req,res)=>{
 })
 const PORT = process.env.PORT || 8001
 app.use('/ty',(req,res)=>{
-    res.send("Hello")
+    res.send("Hell")
 })
 
 app.listen(PORT,()=>{
